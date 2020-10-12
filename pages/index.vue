@@ -1,7 +1,7 @@
 <template>
   <div>
-    <transition name="fade" mode="out-in">
-      <div key="1" v-if="!loading" class="container">
+    <transition-group tag="div" name="fade" mode="out-in">
+      <div key="1" v-show="!loading" class="container">
         <div class="grid-base">
           <template v-for="(link, index) in links">
             <Card
@@ -17,7 +17,7 @@
       <div key="3" v-if="loading">
         <Logo />
       </div>
-    </transition>
+    </transition-group>
   </div>
 </template>
 

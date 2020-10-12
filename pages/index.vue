@@ -1,25 +1,59 @@
 <template>
-  <div :style="styleProp" class="pagebg">
-    <Navbar />
-    <div class="container">
-      <div class="grid-base">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+  <div>
+    <transition name="fade" mode="out-in">
+      <div key="1" v-if="!loading" class="container">
+        <div class="grid-base">
+          <template v-for="(link, index) in links">
+            <Card
+              :key="index"
+              :link="link"
+              :text="text[index]"
+              :description="description[index]"
+              :refs="refs[index]"
+            />
+          </template>
+        </div>
       </div>
-    </div>
+      <div key="3" v-if="loading">
+        <Logo />
+      </div>
+    </transition>
   </div>
 </template>
 
 <script>
-import Navbar from '../components/Navbar'
 import Card from '../components/Card'
+import Logo from '../components/Logo'
 export default {
-  components: { Navbar, Card },
+  transition: 'slide-bottom',
+  components: { Card, Logo },
   data: () => ({
-    styleProp: 'background: url(bg.svg);',
+    links: ['join.svg', 'social.svg', 'community.svg', 'youtube.svg'],
+    text: [
+      'Join Our Team!',
+      'Connect to Us!',
+      'Be a part of the DSC community!',
+      'Watch our sessions!',
+    ],
+    description: [
+      'Join the DSC organizing team and watch yourself grow!',
+      'Follow Us on Our Socail Media Handles! We are everywhere!',
+      'Be an official chapter member on the DSC platform!',
+      'Subscribe our YouTube Channel for past and upcoming content!',
+    ],
+    refs: [
+      'https://forms.gle/LMz7tgBUuuozVPNR8',
+      '',
+      'https://dsc.community.dev/mgms-jawaharlal-nehru-engineering-college/',
+      'https://www.youtube.com/channel/UCVOLADqRPuMjgX8MkDhBNcA',
+    ],
+    loading: true,
   }),
+  mounted() {
+    setTimeout(() => {
+      this.loading = false
+    }, 2000)
+  },
 }
 </script>
 
@@ -101,5 +135,15 @@ export default {
   .container {
     padding-top: 15vh;
   }
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s;
+}
+
+.fade-enter,
+.fade-leave-to
+/* .fade-leave-active in <2.1.8 */ {
+  opacity: 0;
 }
 </style>

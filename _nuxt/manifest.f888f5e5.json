@@ -1,7 +1,7 @@
 {
   "name": "DSC JNEC",
   "short_name": "dscjnec.team-website",
-  "description": "## Build Setup",
+  "description": "Team Website for Developer Student Clubs JNEC",
   "icons": [
     {
       "src": "/_nuxt/icons/icon_64x64.af3719.png",

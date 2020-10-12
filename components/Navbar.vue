@@ -2,7 +2,7 @@
   <div class="center examplex">
     <vs-navbar v-model="active" center-collapsed>
       <template #left>
-        <img height="80px" width="320px" src="logo.svg" alt="" />
+        <img class="dsc-logo" src="logo.svg" alt="" />
       </template>
       <template #right>
         <a
@@ -25,4 +25,15 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="css" scoped>
+.dsc-logo {
+  height: 80px;
+  width: 320px;
+}
+@media only screen and (max-width: 768px) {
+  .dsc-logo {
+    height: 65px;
+    width: 240px;
+  }
+}
+</style>

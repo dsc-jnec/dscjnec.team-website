@@ -1,9 +1,19 @@
 <template>
-  <div>
+  <div :style="styleProp" class="pagebg">
+    <Navbar />
     <Nuxt />
   </div>
 </template>
 
+<script>
+import Navbar from '../components/Navbar'
+export default {
+  components: { Navbar },
+  data: () => ({
+    styleProp: 'background: url(bg.svg);',
+  }),
+}
+</script>
 <style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',

@@ -10,7 +10,7 @@ import Navbar from '../components/Navbar'
 export default {
   components: { Navbar },
   data: () => ({
-    styleProp: 'background: url(bg.svg);',
+    styleProp: 'background: url(bg.jpeg);',
   }),
 }
 </script>

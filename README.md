@@ -1,6 +1,12 @@
 # dscjnec.team-website
 
-Team Website for Developer Student Clubs JNEC
+Team Website for Developer Student Clubs JNEC made in nuxtjs
+
+_Branches_
+
+_Development Code:_ master
+
+_Production Code:_ gh-pages
 
 ```bash
 # install dependencies

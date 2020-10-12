@@ -1,5 +1,5 @@
 <template>
-  <div class="pagebg">
+  <div :style="styleProp" class="pagebg">
     <Navbar />
     <div class="container">
       <div class="grid-base">
@@ -17,6 +17,9 @@ import Navbar from '../components/Navbar'
 import Card from '../components/Card'
 export default {
   components: { Navbar, Card },
+  data: () => ({
+    styleProp: 'background: url(bg.svg);',
+  }),
 }
 </script>
 

@@ -1,6 +1,6 @@
 # dscjnec.team-website
 
-## Build Setup
+Team Website for Developer Student Clubs JNEC
 
 ```bash
 # install dependencies

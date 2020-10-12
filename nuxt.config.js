@@ -8,7 +8,15 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Developer Community for passionate students',
+      },
+      {
+        name: 'keywords',
+        content: 'DSCJNEC, jnec, communities, learn to develop',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: 'dsclogo.svg' }],
   },
@@ -34,6 +42,12 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-180348067-1',
+      },
+    ],
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)

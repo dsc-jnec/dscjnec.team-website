@@ -4,7 +4,7 @@
       <h3>Pot with a plant</h3>
     </template>
     <template #img>
-      <img src="/join.svg" alt="" />
+      <img src="join.svg" alt="" />
     </template>
     <template #text>
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>

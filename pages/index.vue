@@ -81,7 +81,7 @@ export default {
   margin: 10px;
 }
 .pagebg {
-  background: url(/bg.svg);
+  background: url(/dscjnec.team-website/bg.svg);
 }
 .grid-base {
   display: grid;

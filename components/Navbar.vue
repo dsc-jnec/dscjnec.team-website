@@ -4,14 +4,14 @@
       <template #left>
         <img class="dsc-logo" src="logo.svg" alt="" />
       </template>
-      <template #right>
+      <!-- <template #right>
         <a
           target="_blank"
           href="https://github.com/dsc-jnec/dscjnec.team-website"
         >
           <img height="40px" width="40px" src="github.svg" alt=""
         /></a>
-      </template>
+      </template> -->
     </vs-navbar>
   </div>
 </template>

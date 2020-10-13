@@ -17,6 +17,21 @@ export default {
         name: 'keywords',
         content: 'DSCJNEC, jnec, communities, learn to develop',
       },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://dscjnec.team/logo.svg',
+      },
+      {
+        hid: 'twitter:card',
+        property: 'twitter:card',
+        content: 'https://dscjnec.team/logo.svg',
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://dscjnec.team/',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: 'dsclogo.svg' }],
   },
@@ -58,6 +73,11 @@ export default {
   pwa: {
     manifest: {
       name: 'DSC JNEC',
+    },
+    meta: {
+      /* meta options */
+      name: 'DSC JNEC',
+      ogTitle: 'DSC JNEC',
     },
   },
 }

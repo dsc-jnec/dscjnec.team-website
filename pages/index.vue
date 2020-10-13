@@ -1,18 +1,29 @@
 <template>
   <div>
     <transition-group tag="div" name="fade" mode="out-in">
-      <div key="1" v-show="!loading" class="container">
-        <div class="grid-base">
-          <template v-for="(link, index) in links">
+      <div key="1" v-show="!loading">
+        <div class="container">
+          <div class="grid-base">
             <Card
-              :key="index"
-              :link="link"
-              :text="text[index]"
-              :description="description[index]"
-              :refs="refs[index]"
+              :link="devFestPromo.link"
+              :text="devFestPromo.text"
+              :description="devFestPromo.desc"
+              :refs="devFestPromo.refs"
+              class="promo-banner"
             />
-          </template>
+            <template v-for="(link, index) in links">
+              <Card
+                :key="index"
+                :link="link"
+                :text="text[index]"
+                :description="description[index]"
+                :refs="refs[index]"
+                clss
+              />
+            </template>
+          </div>
         </div>
+        <Footer />
       </div>
       <div key="3" v-if="loading">
         <Logo />
@@ -24,9 +35,10 @@
 <script>
 import Card from '../components/Card'
 import Logo from '../components/Logo'
+import Footer from '../components/Footer'
 export default {
   transition: 'slide-bottom',
-  components: { Card, Logo },
+  components: { Card, Logo, Footer },
   data: () => ({
     links: ['join.svg', 'social.svg', 'community.svg', 'youtube.svg'],
     text: [
@@ -48,11 +60,20 @@ export default {
       'https://www.youtube.com/channel/UCVOLADqRPuMjgX8MkDhBNcA',
     ],
     loading: true,
+    devFestPromo: {
+      desc: 'Attend the biggest DEV Fest by Google Developer Groups!',
+      text: 'Devfest!',
+      link: 'DevFestBanner.png',
+      refs: 'https://devfestindia.com/',
+    },
   }),
   mounted() {
     setTimeout(() => {
       this.loading = false
     }, 2000)
+    if (screen.width < 768) {
+      this.devFestPromo.link = 'devfest_mobile.svg'
+    }
   },
 }
 </script>
@@ -145,5 +166,21 @@ export default {
 .fade-leave-to
 /* .fade-leave-active in <2.1.8 */ {
   opacity: 0;
+}
+@media only screen and (min-width: 768px) {
+  .grid-base {
+    padding: 150px 0px;
+  }
+  .promo-banner {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .promo-banner > .vs-card {
+    min-width: 100%;
+  }
+  .promo-banner > .vs-card > .vs-card__text {
+    min-width: 100%;
+  }
 }
 </style>

@@ -5,11 +5,11 @@
       target="_blank"
       href="mailto:contact@dscjnec.team"
     >
-      <img height="25px" width="25px" src="gmail.svg" />
+      <img height="25px" width="25px" src="/gmail.svg" />
     </a>
 
     <a target="_blank" href="https://github.com/dsc-jnec/dscjnec.team-website">
-      <img height="25px" width="25px" src="github.svg" alt=""
+      <img height="25px" width="25px" src="/github.svg" alt=""
     /></a>
   </div>
 </template>

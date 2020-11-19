@@ -17,19 +17,19 @@
       </div>
       <div class="social-grid" v-else>
         <a target="_blank" href="https://www.facebook.com/dscjnec">
-          <img height="40px" width="40px" src="facebook.svg" alt=""
+          <img height="40px" width="40px" src="/facebook.svg" alt=""
         /></a>
 
         <a target="_blank" href="https://twitter.com/DscJnec">
-          <img height="40px" width="40px" src="twitter.svg" alt=""
+          <img height="40px" width="40px" src="/twitter.svg" alt=""
         /></a>
 
         <a target="_blank" href="https://www.instagram.com/dscjnec/">
-          <img height="40px" width="40px" src="instagram.svg" alt=""
+          <img height="40px" width="40px" src="/instagram.svg" alt=""
         /></a>
 
         <a target="_blank" href="https://www.linkedin.com/company/dscjnec">
-          <img height="40px" width="40px" src="linkedin.svg" alt=""
+          <img height="40px" width="40px" src="/linkedin.svg" alt=""
         /></a>
       </div>
     </template>

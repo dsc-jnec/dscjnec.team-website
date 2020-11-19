@@ -40,7 +40,7 @@ export default {
   transition: 'slide-bottom',
   components: { Card, Logo, Footer },
   data: () => ({
-    links: ['join.svg', 'social.svg', 'community.svg', 'youtube.svg'],
+    links: ['/join.svg', '/social.svg', '/community.svg', '/youtube.svg'],
     text: [
       'Join Our Team!',
       'Connect to Us!',
@@ -63,7 +63,7 @@ export default {
     gcpFeedback: {
       desc: 'Liked Loved or Hated the 30 Days of Google Cloud?',
       text: 'Let us know!',
-      link: 'GCP.jpg',
+      link: '/GCP.jpg',
       refs: '/feedback',
     },
   }),
@@ -72,7 +72,7 @@ export default {
       this.loading = false
     }, 2000)
     if (screen.width < 768) {
-      this.gcpFeedback.link = 'GCPmob.png'
+      this.gcpFeedback.link = '/GCPmob.png'
     }
   },
 }

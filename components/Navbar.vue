@@ -2,7 +2,7 @@
   <div class="center examplex">
     <vs-navbar v-model="active" center-collapsed>
       <template #left>
-        <img class="dsc-logo" src="logo.svg" alt="" />
+        <img class="dsc-logo" src="/logo.svg" alt="" />
       </template>
       <!-- <template #right>
         <a

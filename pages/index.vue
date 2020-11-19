@@ -1,14 +1,14 @@
 <template>
   <div>
     <transition-group tag="div" name="fade" mode="out-in">
-      <div key="1" v-show="!loading">
+      <div v-show="!loading" key="1">
         <div class="container">
           <div class="grid-base">
             <Card
-              :link="devFestPromo.link"
-              :text="devFestPromo.text"
-              :description="devFestPromo.desc"
-              :refs="devFestPromo.refs"
+              :link="gcpFeedback.link"
+              :text="gcpFeedback.text"
+              :description="gcpFeedback.desc"
+              :refs="gcpFeedback.refs"
               class="promo-banner"
             />
             <template v-for="(link, index) in links">
@@ -25,7 +25,7 @@
         </div>
         <Footer />
       </div>
-      <div key="3" v-if="loading">
+      <div v-if="loading" key="3">
         <Logo />
       </div>
     </transition-group>
@@ -60,11 +60,11 @@ export default {
       'https://www.youtube.com/channel/UCVOLADqRPuMjgX8MkDhBNcA',
     ],
     loading: true,
-    devFestPromo: {
-      desc: 'Attend the biggest DEV Fest by Google Developer Groups!',
-      text: 'Devfest!',
-      link: 'DevFestBanner.png',
-      refs: 'https://devfestindia.com/',
+    gcpFeedback: {
+      desc: 'Liked Loved or Hated the 30 Days of Google Cloud?',
+      text: 'Let us know!',
+      link: 'GCP.jpg',
+      refs: '/feedback',
     },
   }),
   mounted() {
@@ -72,7 +72,7 @@ export default {
       this.loading = false
     }, 2000)
     if (screen.width < 768) {
-      this.devFestPromo.link = 'devfest_mobile.svg'
+      this.gcpFeedback.link = 'GCPmob.png'
     }
   },
 }

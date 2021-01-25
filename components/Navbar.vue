@@ -4,14 +4,15 @@
       <template #left>
         <img class="dsc-logo" src="/logo.svg" alt="" />
       </template>
-      <!-- <template #right>
-        <a
-          target="_blank"
-          href="https://github.com/dsc-jnec/dscjnec.team-website"
-        >
-          <img height="40px" width="40px" src="github.svg" alt=""
+      <template v-if="$store.state.user.isLoggedIn" #right>
+        <a target="_blank" :href="$store.state.user.user.html_url">
+          <img
+            height="40px"
+            width="40px"
+            :src="$store.state.user.user.avatar_url"
+            alt=""
         /></a>
-      </template> -->
+      </template>
     </vs-navbar>
   </div>
 </template>

@@ -9,7 +9,10 @@
     <template #text>
       <h4>{{ description }}</h4>
       <div v-if="refs !== ''">
-        <a style="text-decoration: none" :href="refs" target="_blank"
+        <a
+          style="text-decoration: none"
+          :href="refs"
+          :target="isExt ? '_blank' : null"
           ><vs-button block>
             <h3>{{ text }}</h3>
           </vs-button></a
@@ -43,6 +46,7 @@ export default {
     text: { type: String, default: '' },
     description: { type: String, default: '' },
     refs: { type: String, default: '' },
+    isExt: { type: Boolean, default: true },
   },
 }
 </script>

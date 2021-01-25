@@ -5,11 +5,12 @@
         <div class="container">
           <div class="grid-base">
             <Card
-              :link="gcpFeedback.link"
-              :text="gcpFeedback.text"
-              :description="gcpFeedback.desc"
-              :refs="gcpFeedback.refs"
+              :link="githubJoin.link"
+              :text="githubJoin.text"
+              :description="githubJoin.desc"
+              :refs="githubJoin.refs"
               class="promo-banner"
+              :is-ext="false"
             />
             <template v-for="(link, index) in links">
               <Card
@@ -18,7 +19,6 @@
                 :text="text[index]"
                 :description="description[index]"
                 :refs="refs[index]"
-                clss
               />
             </template>
           </div>
@@ -65,6 +65,12 @@ export default {
       text: 'Let us know!',
       link: '/GCP.jpg',
       refs: '/feedback',
+    },
+    githubJoin: {
+      desc: 'Join us on github!',
+      text: 'Click here!',
+      link: '/gh-cool.jpg',
+      refs: '/github/join',
     },
   }),
   mounted() {
